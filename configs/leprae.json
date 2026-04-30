@@ -1,0 +1,67 @@
+{
+    "organism": "Mycobacterium leprae",
+    "reference": "NC_002677.1",
+    "reference_source": "GCF_000195855.1_ASM19585v1 (M. leprae TN)",
+    "panel_version": "2.0 (Computationally verified against NC_002677.1)",
+    "description": "AMR targets for M. leprae: gyrA (Fluoroquinolones), folP1 (Dapsone), rpoB (Rifampicin). All amino acid annotations and genomic positions verified by codon extraction, translation, and cross-referencing with Andre et al. 2017 (CMI 23:167-172) and WHO 2023 AMR surveillance catalogue. rpoB uses M. leprae TN numbering system (Mycobrowser release 4), where Ser456 = former Ser425 = E. coli Ser531.",
+    "targets": {
+        "gyrA_DRDR": {
+            "start": 7540,
+            "end": 7650,
+            "gene_start": 7318,
+            "gene_end": 11067,
+            "strand": "+",
+            "drug": "Fluoroquinolones",
+            "notes": "Codons verified: 89=GGC(Gly), 91=GCA(Ala), 95=GAC(Asp)",
+            "known_mutations": {
+                "7582_T": { "ref": "G", "alt": "T", "aa_change": "p.G89C", "codon": "GGC>TGC", "drug": "Ofloxacin", "literature": "WHO 2023" },
+                "7582_C": { "ref": "G", "alt": "C", "aa_change": "p.G89R", "codon": "GGC>CGC", "drug": "Ofloxacin", "literature": "WHO 2023" },
+                "7588_A": { "ref": "G", "alt": "A", "aa_change": "p.A91T", "codon": "GCA>ACA", "drug": "Ofloxacin", "literature": "WHO 2023" },
+                "7588_C": { "ref": "G", "alt": "C", "aa_change": "p.A91P", "codon": "GCA>CCA", "drug": "Ofloxacin", "literature": "WHO 2023" },
+                "7589_T": { "ref": "C", "alt": "T", "aa_change": "p.A91V", "codon": "GCA>GTA", "drug": "Ofloxacin", "literature": "WHO 2023" },
+                "7589_A": { "ref": "C", "alt": "A", "aa_change": "p.A91E", "codon": "GCA>GAA", "drug": "Ofloxacin", "literature": "WHO 2023" },
+                "7600_A": { "ref": "G", "alt": "A", "aa_change": "p.D95N", "codon": "GAC>AAC", "drug": "Ofloxacin", "literature": "WHO 2023" },
+                "7600_T": { "ref": "G", "alt": "T", "aa_change": "p.D95Y", "codon": "GAC>TAC", "drug": "Ofloxacin", "literature": "WHO 2023" },
+                "7601_G": { "ref": "A", "alt": "G", "aa_change": "p.D95G", "codon": "GAC>GGC", "drug": "Ofloxacin", "literature": "WHO 2023" }
+            }
+        },
+        "folP1_DRDR": {
+            "start": 296800,
+            "end": 296900,
+            "gene_start": 296696,
+            "gene_end": 297550,
+            "strand": "+",
+            "drug": "Dapsone",
+            "notes": "Codons verified: 53=ACC(Thr) at 296852-296854, 55=CCC(Pro) at 296858-296860",
+            "known_mutations": {
+                "296852_G": { "ref": "A", "alt": "G", "aa_change": "p.T53A", "codon": "ACC>GCC", "drug": "Dapsone", "literature": "WHO 2023" },
+                "296853_T": { "ref": "C", "alt": "T", "aa_change": "p.T53I", "codon": "ACC>ATC", "drug": "Dapsone", "literature": "WHO 2023" },
+                "296858_T": { "ref": "C", "alt": "T", "aa_change": "p.P55S", "codon": "CCC>TCC", "drug": "Dapsone", "literature": "WHO 2023" },
+                "296859_T": { "ref": "C", "alt": "T", "aa_change": "p.P55L", "codon": "CCC>CTC", "drug": "Dapsone", "literature": "WHO 2023" },
+                "296859_G": { "ref": "C", "alt": "G", "aa_change": "p.P55R", "codon": "CCC>CGC", "drug": "Dapsone", "literature": "WHO 2023" }
+            }
+        },
+        "rpoB_RRDR": {
+            "start": 2275380,
+            "end": 2275500,
+            "gene_start": 2273269,
+            "gene_end": 2276805,
+            "strand": "-",
+            "drug": "Rifampicin",
+            "notes": "Codons verified against Andre et al. 2017 (CMI 23:167-172): 440=ATG(Met), 441=GAT(Asp), 451=CAC(His), 456=TCG(Ser), 458=CTG(Leu). TN numbering: S456 = old S425 = E.coli S531. Gene boundaries from NCBI GFF3 (CDS 2273269-2276787, locus ML_RS09640). Gene end set to 2276805 to match M. leprae TN codon numbering (Mycobrowser). NCBI CDS annotation (2273269-2276787) uses a different start site. The value 2276805 is calibrated so the annotator's codon math produces S456, H451, D441, M440, L458 at their verified genomic positions.",
+            "known_mutations": {
+                "2275487_T": { "ref": "A", "alt": "T", "aa_change": "p.M440K", "codon": "ATG>AAG", "drug": "Rifampicin", "literature": "WHO 2023" },
+                "2275485_A": { "ref": "C", "alt": "A", "aa_change": "p.D441Y", "codon": "GAT>TAT", "drug": "Rifampicin", "literature": "WHO 2023; Cambau 2018" },
+                "2275485_T": { "ref": "C", "alt": "T", "aa_change": "p.D441N", "codon": "GAT>AAT", "drug": "Rifampicin", "literature": "WHO 2023" },
+                "2275484_A": { "ref": "T", "alt": "A", "aa_change": "p.D441V", "codon": "GAT>GTT", "drug": "Rifampicin", "literature": "WHO 2023" },
+                "2275455_C": { "ref": "G", "alt": "C", "aa_change": "p.H451D", "codon": "CAC>GAC", "drug": "Rifampicin", "literature": "WHO 2023; Cambau 2018" },
+                "2275455_A": { "ref": "G", "alt": "A", "aa_change": "p.H451Y", "codon": "CAC>TAC", "drug": "Rifampicin", "literature": "WHO 2023" },
+                "2275454_A": { "ref": "T", "alt": "A", "aa_change": "p.H451L", "codon": "CAC>CTC", "drug": "Rifampicin", "literature": "WHO 2023" },
+                "2275439_A": { "ref": "G", "alt": "A", "aa_change": "p.S456L", "codon": "TCG>TTG", "drug": "Rifampicin", "literature": "WHO 2023; Cambau 2018; Andre 2017" },
+                "2275439_C": { "ref": "G", "alt": "C", "aa_change": "p.S456W", "codon": "TCG>TGG", "drug": "Rifampicin", "literature": "WHO 2023" },
+                "2275434_C": { "ref": "G", "alt": "C", "aa_change": "p.L458V", "codon": "CTG>GTG", "drug": "Rifampicin", "literature": "WHO 2023" },
+                "2275433_G": { "ref": "A", "alt": "G", "aa_change": "p.L458P", "codon": "CTG>CCG", "drug": "Rifampicin", "literature": "WHO 2023" }
+            }
+        }
+    }
+}

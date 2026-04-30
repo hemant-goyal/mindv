@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# PyTorch
+*.pth
+*.pt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Output (generated at runtime, not committed)
+results/
+clinical_reports/
+Full_AMR_Panel/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data files (too large for git)
+*.bam
+*.bam.bai
+*.fna
+*.fna.fai
+*.fastq.gz
