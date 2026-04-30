@@ -33,3 +33,4 @@ Full_AMR_Panel/
 *.fna
 *.fna.fai
 *.fastq.gz
+.Rhistory
