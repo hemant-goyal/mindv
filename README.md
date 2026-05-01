@@ -8,6 +8,8 @@ It treats variant calling as **image classification** — converting pileups of 
 
 mindv was developed for antimicrobial resistance (AMR) profiling in a *Mycobacterium* species, but its organism-agnostic JSON panel system means it can be pointed at any haploid genome with a known set of resistance-associated loci.
 
+**NOTE:** Any help would be greatly appreciated in terms of testing and also in generating AMR panels for WHO priority pathogens. 
+
 ---
 
 ## Table of Contents
@@ -77,7 +79,7 @@ Given a BAM file and a reference FASTA, the scanner (`scanner.py`) walks through
 
 Quality filtering happens at this stage, at the pysam pileup level. Reads with mapping quality below `--min-mq` and individual bases with base quality below `--min-bq` are excluded by pysam *before* any allele counting occurs. This means low-quality evidence is invisible to both the heuristic counter and the CNN — they always see the same filtered read stack, which prevents inconsistencies between the triggering logic and the classification logic.
 
-The scanner also implements **GATK-aware BAM selection**: when a patient directory contains both a raw BAM (`sample.bam`) and a GATK MarkDuplicates output (`sample_marked_duplicates.bam`), the deduplicated file is automatically preferred. This prevents false-positive allele frequencies caused by PCR amplification bias.
+The scanner also implements **GATK-aware BAM selection**: when a sample directory contains both a raw BAM (`sample.bam`) and a GATK MarkDuplicates output (`sample_marked_duplicates.bam`), the deduplicated file is automatically preferred. This prevents false-positive allele frequencies caused by PCR amplification bias.
 
 ### Stage 3: Annotation and Tiered Classification
 
@@ -89,7 +91,7 @@ Every CNN-positive call is annotated by `annotator.py` with:
 - **Drug association**: for KNOWN-tier variants, which drug the mutation confers resistance to
 - **Literature reference**: the source publication for KNOWN-tier variants, which is integrated into the AMR panel.
 
-Post-CNN filtering then applies the user's chosen thresholds (AF, DP, AD, confidence) to produce the final reported variant set. Filtered variants are logged in per-patient text reports with the specific reason(s) they failed, so nothing is silently discarded.
+Post-CNN filtering then applies the user's chosen thresholds (AF, DP, AD, confidence) to produce the final reported variant set. Filtered variants are logged in per-sample text reports with the specific reason(s) they failed, so nothing is silently discarded.
 
 ---
 
@@ -146,7 +148,7 @@ mindv train --output mindv_weights.pth --epochs 30
 
 This generates synthetic pileup images and trains the CNN. Takes ~5 minutes on CPU. The output is a `.pth` weights file used by the scanner.
 
-### 2. Scan a patient cohort
+### 2. Scan a sample cohort
 
 ```bash
 mindv scan \
@@ -156,19 +158,19 @@ mindv scan \
     --outdir results/
 ```
 
-This recursively finds BAM files, prioritizes GATK-deduplicated files (`*_marked_duplicates.bam`) when available, scans each patient against the gene panel, and produces per-patient reports plus a master CSV.
+This recursively finds BAM files, prioritizes GATK-deduplicated files (`*_marked_duplicates.bam`) when available, scans each sample against the gene panel, and produces per-sample reports plus a master CSV.
 
 ### 3. Review results
 
 ```bash
-# Master summary across all patients
+# Master summary across all samples
 cat results/Master_Clinical_Summary.csv
 
-# Per-patient detailed report (includes filtered variants with reasons)
-cat results/Patient_01_report.txt
+# Per-sample detailed report (includes filtered variants with reasons)
+cat results/sample_01_report.txt
 
-# Per-patient tensor visualization PDFs
-open results/Patient_01_plots.pdf
+# Per-sample tensor visualization PDFs
+open results/sample_01_plots.pdf
 ```
 
 ---
@@ -219,7 +221,7 @@ mindv scan [OPTIONS]
 
 **BAM file selection logic:**
 
-The scanner searches `--bam_dir` recursively for `.bam` files, grouped by parent directory (one folder per patient). If a folder contains both a raw BAM (`sample.bam`) and a GATK-deduplicated BAM (`sample_marked_duplicates.bam`), the deduplicated file is used. This prevents false-positive allele frequencies caused by PCR amplification bias. The BAM index can be in any standard format (`.bam.bai`, `.bai`, or `.csi`) — pysam detects all three automatically.
+The scanner searches `--bam_dir` recursively for `.bam` files, grouped by parent directory (one folder per sample). If a folder contains both a raw BAM (`sample.bam`) and a GATK-deduplicated BAM (`sample_marked_duplicates.bam`), the deduplicated file is used. This prevents false-positive allele frequencies caused by PCR amplification bias. The BAM index can be in any standard format (`.bam.bai`, `.bai`, or `.csi`) — pysam detects all three automatically.
 
 ### Filter Presets
 
@@ -346,10 +348,10 @@ After scanning, the output directory contains:
 ```
 results/
 ├── Master_Clinical_Summary.csv      # Cohort-wide variant table
-├── Patient_01_report.txt            # Detailed per-patient text report
-├── Patient_01_plots.pdf             # Tensor visualization for each variant
-├── Patient_02_report.txt
-├── Patient_02_plots.pdf
+├── sample_01_report.txt            # Detailed per-sample text report
+├── sample_01_plots.pdf             # Tensor visualization for each variant
+├── sample_02_report.txt
+├── sample_02_plots.pdf
 └── ...
 ```
 
@@ -357,7 +359,7 @@ results/
 
 | Column | Description |
 |--------|-------------|
-| `PATIENT` | Sample identifier (derived from BAM filename) |
+| `sample` | Sample identifier (derived from BAM filename) |
 | `GENE` | Target gene region name |
 | `CONTIG` | Reference contig |
 | `POS` | 1-based genomic position |
@@ -373,7 +375,7 @@ results/
 | `KNOWN_DRUG` | Associated drug (KNOWN tier only) |
 | `LITERATURE` | Source reference (KNOWN tier only) |
 
-### Per-patient text reports
+### Per-sample text reports
 
 Each text report includes a header with the applied filter parameters, a per-gene breakdown with one row per evaluated position, and a summary section listing reported vs. filtered counts. **Filtered variants are not silently discarded** — they appear in the text report with a `FILT` tag and the specific reason(s) they failed:
 
@@ -385,7 +387,7 @@ This transparency is deliberate. When tuning thresholds, you can grep the text r
 
 ### Tensor visualization PDFs
 
-For each reported variant, a PDF page shows the raw pileup tensor (grayscale image) that the CNN classified. The reference sequence is Row 0 (separated by a red horizontal line), patient reads are below. A cyan vertical dashed line marks the center position. The title shows depth, allele frequency, CNN classification, confidence, protein consequence, tier, and drug association.
+For each reported variant, a PDF page shows the raw pileup tensor (grayscale image) that the CNN classified. The reference sequence is Row 0 (separated by a red horizontal line), sample reads are below. A cyan vertical dashed line marks the center position. The title shows depth, allele frequency, CNN classification, confidence, protein consequence, tier, and drug association.
 
 These plots serve as visual sanity checks — you can confirm that the CNN is seeing a clean column of alternate bases (real variant) rather than scattered noise (false positive).
 
@@ -449,11 +451,11 @@ The clinical preset raises this to ≥ 0.90. The sensitive preset lowers it to �
 
 ## Validation Results
 
-mindv was validated on a cohort of clinical *Mycobacterium* species whole-genome sequencing samples, with Sanger sequencing as the orthogonal gold standard.
+mindv was validated on a cohort of *Mycobacterium* species whole-genome sequencing samples, with Sanger sequencing as the orthogonal gold standard.
 
 ### Sanger-validated resistance mutations
 
-5 Samples were confirmed by Sanger sequencing to carry the gyrA fluoroquinolone resistance mutation. One additional low-frequency call (sample_05, AF = 0.009) fell below Sanger's limit of detection (~15–20% AF) and could not be confirmed or excluded.
+5 Samples were confirmed by Sanger sequencing to carry the gyrA resistance mutation. One additional low-frequency call (sample_05, AF = 0.009) fell below Sanger's limit of detection (~15–20% AF) and could not be confirmed or excluded.
 
 ### Performance across filter presets
 
@@ -613,7 +615,7 @@ mindv/
 
 **`annotator.py`** (~250 lines) — Loads the JSON panel, performs strand-aware codon translation to determine protein consequence, classifies mutations as Known vs. Novel based on panel entries, and attaches drug/literature metadata.
 
-**`cli.py`** (~350 lines) — The glue. Parses arguments, resolves filter presets, orchestrates the train/scan pipeline, writes per-patient text reports and PDFs, applies the post-CNN filter cascade (AF, DP, AD, confidence), and produces the master CSV.
+**`cli.py`** (~350 lines) — The glue. Parses arguments, resolves filter presets, orchestrates the train/scan pipeline, writes per-sample text reports and PDFs, applies the post-CNN filter cascade (AF, DP, AD, confidence), and produces the master CSV.
 
 ---
 
@@ -667,7 +669,7 @@ Features planned for v2 and beyond, roughly in priority order:
 - **Additional organism panels**: *M. tuberculosis* (TB), *S. aureus* (MRSA), *N. gonorrhoeae* (gonorrhoea) — community contributions welcome.
 - **CARD database integration**: automated panel generation from the Comprehensive Antibiotic Resistance Database.
 - **VCF output**: standard VCF format alongside the current CSV, for compatibility with downstream tools like SnpEff, SnpSift, and IGV.
-- **Simulated BAM test suite**: `wgsim`/`ART`-generated test BAMs with known spiked-in mutations for end-to-end pipeline testing without real patient data.
+- **Simulated BAM test suite**: `wgsim`/`ART`-generated test BAMs with known spiked-in mutations for end-to-end pipeline testing without real sample data.
 
 ---
 
@@ -675,7 +677,7 @@ Features planned for v2 and beyond, roughly in priority order:
 
 If you use mindv in your research, please cite:
 
-> *mindv: A Minimal PyTorch Implementation of Image-Based Variant Calling for Genomics Education and Rapid AMR Profiling.* [Hemant Goyal]. [Journal, Year]. (https://github.com/hemant-goyal/mindv) (Manuscript in preparation)
+> *mindv: A Minimal PyTorch Implementation of Image-Based Variant Calling for Genomics Education and Rapid AMR Profiling.* [Hemant Goyal].(https://github.com/hemant-goyal/mindv) (Manuscript in preparation)
 
 ---
 
