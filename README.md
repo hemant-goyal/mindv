@@ -1,14 +1,14 @@
-# mindv — A Minimal Deep Learning Variant Caller
+# mindv — A Minimal Deep Learning Haplotype Variant Caller
 
 [![Install](https://img.shields.io/badge/install-pip%20install%20git%2Bgithub.com%2Fhemant--goyal%2Fmindv-blue)](https://github.com/hemant-goyal/mindv)
 
 **mindv** (minDeepVariant) is a from-scratch, educational implementation of image-based variant calling, inspired by [Google's DeepVariant](https://github.com/google/deepvariant) and built in the spirit of Karpathy's [minGPT](https://github.com/karpathy/minGPT): minimal code, maximal clarity, real results.
 
-It treats variant calling as **image classification** — converting pileups of aligned sequencing reads into grayscale tensors and classifying them with a small convolutional neural network (CNN). The entire codebase is ~1,250 lines of Python across 5 modules, each small enough to read in one sitting.
+It treats variant calling as **image classification** converting pileups of aligned sequencing reads into grayscale tensors and classifying them with a small convolutional neural network (CNN). The entire codebase is ~1,250 lines of Python across 5 modules, each small enough to read in one sitting.
 
-mindv was developed for antimicrobial resistance (AMR) profiling in a *Mycobacterium* species, but its organism-agnostic JSON panel system means it can be pointed at any haploid genome with a known set of resistance-associated loci.
+mindv was developed for antimicrobial resistance (AMR) profiling in a *Mycobacterium* species, but its organism agnostic JSON panel system means it can be pointed at any haploid genome with a known set of resistance-associated loci.
 
-**NOTE:** Any help would be greatly appreciated in terms of testing and also in generating AMR panels for WHO priority pathogens. 
+**NOTE:** Any help would be greatly appreciated in terms of testing and generating AMR panels for WHO priority pathogens. 
 
 ---
 
