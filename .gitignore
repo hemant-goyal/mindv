@@ -27,3 +27,4 @@ tbdb/
 # Temporary
 *.tmp
 *.log
+.Rhistory
