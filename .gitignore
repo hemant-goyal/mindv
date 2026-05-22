@@ -1,36 +1,29 @@
 # Python
 __pycache__/
-*.py[cod]
+*.pyc
+*.pyo
 *.egg-info/
-dist/
 build/
-*.egg
+dist/
+.eggs/
 
-# PyTorch
-*.pth
-*.pt
+# Windows Zone.Identifier files (WSL artifact)
+*:Zone.Identifier
 
-# IDE
-.vscode/
-.idea/
-*.swp
+# Backup files
+*.bak_*
+*.bak
 
-# OS
-.DS_Store
-Thumbs.db
+# Junk files from scripting
+=21
+integrate_classifier.py
 
-# Output (generated at runtime, not committed)
-results/
-clinical_reports/
-Full_AMR_Panel/
+# Large data directories
+tbdb/
 
-# Jupyter
-.ipynb_checkpoints/
+# Root-level duplicate scripts
+/cli.py
 
-# Data files (too large for git)
-*.bam
-*.bam.bai
-*.fna
-*.fna.fai
-*.fastq.gz
-.Rhistory
+# Temporary
+*.tmp
+*.log

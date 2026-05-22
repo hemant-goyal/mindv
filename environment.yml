@@ -1,0 +1,38 @@
+name: mindv
+
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  - python=3.11
+
+  # ── Bioinformatics (bioconda) ──────────────────────────────────
+  - bioconda::samtools>=1.19
+  - bioconda::bwa>=0.7.17
+  - bioconda::pysam>=0.21
+  - bioconda::fastp>=0.23
+  - bioconda::gatk4>=4.4      # pins Java=17 (class file 61.0)
+  - bioconda::snpeff=5.2      # last version compiled for Java 11/17
+  - bioconda::tb-profiler>=6.4
+
+  # ── Java: must match GATK4's pin ──────────────────────────────
+  - conda-forge::openjdk=17   # explicit pin — no version fighting
+
+  # ── Scientific Python ──────────────────────────────────────────
+  - conda-forge::biopython>=1.83
+  - conda-forge::numpy>=1.26
+  - conda-forge::scipy>=1.12
+  - conda-forge::pandas>=2.1
+  - conda-forge::matplotlib>=3.8
+  - conda-forge::seaborn>=0.13
+  - conda-forge::scikit-learn>=1.4
+  - conda-forge::pytorch>=2.2
+  - conda-forge::torchvision>=0.17
+
+  # ── Testing & dev ──────────────────────────────────────────────
+  - conda-forge::pytest>=7.4
+  - conda-forge::pytest-cov>=4.1
+  - conda-forge::pip
+  # mindeepvariant installed via: pip install -e . (done by install.sh)
