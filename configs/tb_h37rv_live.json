@@ -1,0 +1,3211 @@
+{
+  "organism": "Mycobacterium tuberculosis",
+  "reference": "GCF_000195955.2_ASM19595v2_genomic",
+  "panel_version": "1.0-live",
+  "panel_build_stats": {
+    "verified": 193,
+    "failed": 0,
+    "skipped_no_annotation": 0,
+    "skipped_no_snp": 126,
+    "promoter": 11
+  },
+  "targets": {
+    "eis_promoter": {
+      "start": 2714114,
+      "end": 2714181,
+      "known_mutations": {
+        "2714134_A": {
+          "ref": "G",
+          "alt": "A",
+          "aa_change": "c.-10G>A",
+          "codon": "G>A",
+          "drug": "Kanamycin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "PROMOTER/rRNA",
+            "ref_codon_extracted": "N/A",
+            "ref_aa_extracted": "N/A"
+          }
+        },
+        "2714136_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "c.-12C>T",
+          "codon": "C>T",
+          "drug": "Kanamycin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "PROMOTER/rRNA",
+            "ref_codon_extracted": "N/A",
+            "ref_aa_extracted": "N/A"
+          }
+        },
+        "2714138_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "c.-14C>T",
+          "codon": "C>T",
+          "drug": "Amikacin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "PROMOTER/rRNA",
+            "ref_codon_extracted": "N/A",
+            "ref_aa_extracted": "N/A"
+          }
+        },
+        "2714161_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "c.-37G>T",
+          "codon": "G>T",
+          "drug": "Kanamycin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "PROMOTER/rRNA",
+            "ref_codon_extracted": "N/A",
+            "ref_aa_extracted": "N/A"
+          }
+        }
+      },
+      "gene_start": 2714124,
+      "gene_end": 2715332,
+      "strand": "-",
+      "type": "promoter"
+    },
+    "embB": {
+      "start": 4247409,
+      "end": 4248023,
+      "known_mutations": {
+        "4247429_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.M306L",
+          "codon": "ATG>CTG",
+          "drug": "Ethambutol",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ATG",
+            "ref_aa_extracted": "M"
+          }
+        },
+        "4247429_T": {
+          "ref": "A",
+          "alt": "T",
+          "aa_change": "p.M306L",
+          "codon": "ATG>TTG",
+          "drug": "Ethambutol",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ATG",
+            "ref_aa_extracted": "M"
+          }
+        },
+        "4247429_G": {
+          "ref": "A",
+          "alt": "G",
+          "aa_change": "p.M306V",
+          "codon": "ATG>GTG",
+          "drug": "Ethambutol",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ATG",
+            "ref_aa_extracted": "M"
+          }
+        },
+        "4247431_A": {
+          "ref": "G",
+          "alt": "A",
+          "aa_change": "p.M306I",
+          "codon": "ATG>ATA",
+          "drug": "Ethambutol",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ATG",
+            "ref_aa_extracted": "M"
+          }
+        },
+        "4247431_C": {
+          "ref": "G",
+          "alt": "C",
+          "aa_change": "p.M306I",
+          "codon": "ATG>ATC",
+          "drug": "Ethambutol",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ATG",
+            "ref_aa_extracted": "M"
+          }
+        },
+        "4247431_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "p.M306I",
+          "codon": "ATG>ATT",
+          "drug": "Ethambutol",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ATG",
+            "ref_aa_extracted": "M"
+          }
+        },
+        "4247469_G": {
+          "ref": "A",
+          "alt": "G",
+          "aa_change": "p.Y319C",
+          "codon": "TAT>TGT",
+          "drug": "Ethambutol",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TAT",
+            "ref_aa_extracted": "Y"
+          }
+        },
+        "4247469_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.Y319S",
+          "codon": "TAT>TCT",
+          "drug": "Ethambutol",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TAT",
+            "ref_aa_extracted": "Y"
+          }
+        },
+        "4247495_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "p.D328Y",
+          "codon": "GAT>TAT",
+          "drug": "Ethambutol",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAT",
+            "ref_aa_extracted": "D"
+          }
+        },
+        "4247574_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.D354A",
+          "codon": "GAC>GCC",
+          "drug": "Ethambutol",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAC",
+            "ref_aa_extracted": "D"
+          }
+        },
+        "4247729_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "p.G406C",
+          "codon": "GGC>TGC",
+          "drug": "Ethambutol",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GGC",
+            "ref_aa_extracted": "G"
+          }
+        },
+        "4247729_A": {
+          "ref": "G",
+          "alt": "A",
+          "aa_change": "p.G406S",
+          "codon": "GGC>AGC",
+          "drug": "Ethambutol",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GGC",
+            "ref_aa_extracted": "G"
+          }
+        },
+        "4247730_C": {
+          "ref": "G",
+          "alt": "C",
+          "aa_change": "p.G406A",
+          "codon": "GGC>GCC",
+          "drug": "Ethambutol",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GGC",
+            "ref_aa_extracted": "G"
+          }
+        },
+        "4247730_A": {
+          "ref": "G",
+          "alt": "A",
+          "aa_change": "p.G406D",
+          "codon": "GGC>GAC",
+          "drug": "Ethambutol",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GGC",
+            "ref_aa_extracted": "G"
+          }
+        },
+        "4248002_A": {
+          "ref": "C",
+          "alt": "A",
+          "aa_change": "p.Q497K",
+          "codon": "CAG>AAG",
+          "drug": "Ethambutol",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAG",
+            "ref_aa_extracted": "Q"
+          }
+        },
+        "4248003_G": {
+          "ref": "A",
+          "alt": "G",
+          "aa_change": "p.Q497R",
+          "codon": "CAG>CGG",
+          "drug": "Ethambutol",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAG",
+            "ref_aa_extracted": "Q"
+          }
+        }
+      },
+      "gene_start": 4246514,
+      "gene_end": 4249810,
+      "strand": "+"
+    },
+    "inhA_promoter": {
+      "start": 1673403,
+      "end": 1674068,
+      "known_mutations": {
+        "1673423_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "c.-779G>T",
+          "codon": "G>T",
+          "drug": "Ethionamide",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "PROMOTER/rRNA",
+            "ref_codon_extracted": "N/A",
+            "ref_aa_extracted": "N/A"
+          }
+        },
+        "1673424_G": {
+          "ref": "A",
+          "alt": "G",
+          "aa_change": "c.-778A>G",
+          "codon": "A>G",
+          "drug": "Ethionamide",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "PROMOTER/rRNA",
+            "ref_codon_extracted": "N/A",
+            "ref_aa_extracted": "N/A"
+          }
+        },
+        "1673425_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "c.-777C>T",
+          "codon": "C>T",
+          "drug": "Ethionamide",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "PROMOTER/rRNA",
+            "ref_codon_extracted": "N/A",
+            "ref_aa_extracted": "N/A"
+          }
+        },
+        "1673432_A": {
+          "ref": "T",
+          "alt": "A",
+          "aa_change": "c.-770T>A",
+          "codon": "T>A",
+          "drug": "Ethionamide",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "PROMOTER/rRNA",
+            "ref_codon_extracted": "N/A",
+            "ref_aa_extracted": "N/A"
+          }
+        },
+        "1673432_C": {
+          "ref": "T",
+          "alt": "C",
+          "aa_change": "c.-770T>C",
+          "codon": "T>C",
+          "drug": "Ethionamide",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "PROMOTER/rRNA",
+            "ref_codon_extracted": "N/A",
+            "ref_aa_extracted": "N/A"
+          }
+        },
+        "1673432_G": {
+          "ref": "T",
+          "alt": "G",
+          "aa_change": "c.-770T>G",
+          "codon": "T>G",
+          "drug": "Ethionamide",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "PROMOTER/rRNA",
+            "ref_codon_extracted": "N/A",
+            "ref_aa_extracted": "N/A"
+          }
+        },
+        "1674048_A": {
+          "ref": "G",
+          "alt": "A",
+          "aa_change": "c.-154G>A",
+          "codon": "G>A",
+          "drug": "Ethionamide",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "PROMOTER/rRNA",
+            "ref_codon_extracted": "N/A",
+            "ref_aa_extracted": "N/A"
+          }
+        }
+      },
+      "gene_start": 1674202,
+      "gene_end": 1675011,
+      "strand": "+",
+      "type": "promoter"
+    },
+    "inhA": {
+      "start": 1674461,
+      "end": 1674501,
+      "known_mutations": {
+        "1674481_G": {
+          "ref": "T",
+          "alt": "G",
+          "aa_change": "p.S94A",
+          "codon": "TCG>GCG",
+          "drug": "Ethionamide",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TCG",
+            "ref_aa_extracted": "S"
+          }
+        }
+      },
+      "gene_start": 1674202,
+      "gene_end": 1675011,
+      "strand": "+"
+    },
+    "katG": {
+      "start": 2153908,
+      "end": 2156048,
+      "known_mutations": {
+        "2153928_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W728*",
+          "codon": "TGG>TGA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2153929_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W728*",
+          "codon": "TGG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2154045_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W689*",
+          "codon": "TGG>TGA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2154046_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W689*",
+          "codon": "TGG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2154100_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "p.S671*",
+          "codon": "TCG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TCG",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "2154108_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W668*",
+          "codon": "TGG>TGA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2154109_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W668*",
+          "codon": "TGG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2154293_A": {
+          "ref": "C",
+          "alt": "A",
+          "aa_change": "p.E607*",
+          "codon": "GAG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAG",
+            "ref_aa_extracted": "E"
+          }
+        },
+        "2154350_A": {
+          "ref": "C",
+          "alt": "A",
+          "aa_change": "p.E588*",
+          "codon": "GAG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAG",
+            "ref_aa_extracted": "E"
+          }
+        },
+        "2154597_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W505*",
+          "codon": "TGG>TGA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2154598_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W505*",
+          "codon": "TGG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2154681_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W477*",
+          "codon": "TGG>TGA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2154682_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W477*",
+          "codon": "TGG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2154798_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W438*",
+          "codon": "TGG>TGA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2154799_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W438*",
+          "codon": "TGG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2154873_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "p.Y413*",
+          "codon": "TAC>TAA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TAC",
+            "ref_aa_extracted": "Y"
+          }
+        },
+        "2154873_C": {
+          "ref": "G",
+          "alt": "C",
+          "aa_change": "p.Y413*",
+          "codon": "TAC>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TAC",
+            "ref_aa_extracted": "Y"
+          }
+        },
+        "2154876_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W412*",
+          "codon": "TGG>TGA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2154877_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W412*",
+          "codon": "TGG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2154921_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W397*",
+          "codon": "TGG>TGA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2154922_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W397*",
+          "codon": "TGG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2155058_A": {
+          "ref": "G",
+          "alt": "A",
+          "aa_change": "p.Q352*",
+          "codon": "CAA>TAA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAA",
+            "ref_aa_extracted": "Q"
+          }
+        },
+        "2155059_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W351*",
+          "codon": "TGG>TGA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2155060_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W351*",
+          "codon": "TGG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2155129_A": {
+          "ref": "C",
+          "alt": "A",
+          "aa_change": "p.W328L",
+          "codon": "TGG>TTG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2155149_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W321*",
+          "codon": "TGG>TGA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2155150_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W321*",
+          "codon": "TGG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2155167_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "p.S315R",
+          "codon": "AGC>AGA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AGC",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "2155167_C": {
+          "ref": "G",
+          "alt": "C",
+          "aa_change": "p.S315R",
+          "codon": "AGC>AGG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AGC",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "2155168_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.S315N",
+          "codon": "AGC>AAC",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AGC",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "2155168_A": {
+          "ref": "C",
+          "alt": "A",
+          "aa_change": "p.S315I",
+          "codon": "AGC>ATC",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AGC",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "2155168_G": {
+          "ref": "C",
+          "alt": "G",
+          "aa_change": "p.S315T",
+          "codon": "AGC>ACC",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AGC",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "2155169_G": {
+          "ref": "T",
+          "alt": "G",
+          "aa_change": "p.S315R",
+          "codon": "AGC>CGC",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AGC",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "2155212_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W300*",
+          "codon": "TGG>TGA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2155213_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W300*",
+          "codon": "TGG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2155500_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W204*",
+          "codon": "TGG>TGA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2155501_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W204*",
+          "codon": "TGG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2155518_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W198*",
+          "codon": "TGG>TGA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2155519_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W198*",
+          "codon": "TGG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2155588_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "p.S175*",
+          "codon": "TCG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TCG",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "2155599_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "p.C171*",
+          "codon": "TGC>TGA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGC",
+            "ref_aa_extracted": "C"
+          }
+        },
+        "2155629_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W161*",
+          "codon": "TGG>TGA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2155630_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W161*",
+          "codon": "TGG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2155647_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "p.Y155*",
+          "codon": "TAC>TAA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TAC",
+            "ref_aa_extracted": "Y"
+          }
+        },
+        "2155647_C": {
+          "ref": "G",
+          "alt": "C",
+          "aa_change": "p.Y155*",
+          "codon": "TAC>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TAC",
+            "ref_aa_extracted": "Y"
+          }
+        },
+        "2155665_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W149*",
+          "codon": "TGG>TGA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2155666_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W149*",
+          "codon": "TGG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2155773_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "p.Y113*",
+          "codon": "TAC>TAA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TAC",
+            "ref_aa_extracted": "Y"
+          }
+        },
+        "2155773_C": {
+          "ref": "G",
+          "alt": "C",
+          "aa_change": "p.Y113*",
+          "codon": "TAC>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TAC",
+            "ref_aa_extracted": "Y"
+          }
+        },
+        "2155791_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W107*",
+          "codon": "TGG>TGA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2155792_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W107*",
+          "codon": "TGG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2155842_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W90*",
+          "codon": "TGG>TGA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2155843_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W90*",
+          "codon": "TGG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2155850_A": {
+          "ref": "G",
+          "alt": "A",
+          "aa_change": "p.Q88*",
+          "codon": "CAG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAG",
+            "ref_aa_extracted": "Q"
+          }
+        },
+        "2155995_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W39*",
+          "codon": "TGG>TGA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2155996_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.W39*",
+          "codon": "TGG>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TGG",
+            "ref_aa_extracted": "W"
+          }
+        },
+        "2156028_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "p.Y28*",
+          "codon": "TAC>TAA",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TAC",
+            "ref_aa_extracted": "Y"
+          }
+        },
+        "2156028_C": {
+          "ref": "G",
+          "alt": "C",
+          "aa_change": "p.Y28*",
+          "codon": "TAC>TAG",
+          "drug": "Isoniazid",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TAC",
+            "ref_aa_extracted": "Y"
+          }
+        }
+      },
+      "gene_start": 2153889,
+      "gene_end": 2156111,
+      "strand": "-"
+    },
+    "gyrA": {
+      "start": 7543,
+      "end": 7602,
+      "known_mutations": {
+        "7563_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "p.G88C",
+          "codon": "GGC>TGC",
+          "drug": "Levofloxacin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GGC",
+            "ref_aa_extracted": "G"
+          }
+        },
+        "7564_C": {
+          "ref": "G",
+          "alt": "C",
+          "aa_change": "p.G88A",
+          "codon": "GGC>GCC",
+          "drug": "Levofloxacin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GGC",
+            "ref_aa_extracted": "G"
+          }
+        },
+        "7566_A": {
+          "ref": "G",
+          "alt": "A",
+          "aa_change": "p.D89N",
+          "codon": "GAC>AAC",
+          "drug": "Levofloxacin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAC",
+            "ref_aa_extracted": "D"
+          }
+        },
+        "7570_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.A90V",
+          "codon": "GCG>GTG",
+          "drug": "Levofloxacin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GCG",
+            "ref_aa_extracted": "A"
+          }
+        },
+        "7572_C": {
+          "ref": "T",
+          "alt": "C",
+          "aa_change": "p.S91P",
+          "codon": "TCG>CCG",
+          "drug": "Levofloxacin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TCG",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "7581_A": {
+          "ref": "G",
+          "alt": "A",
+          "aa_change": "p.D94N",
+          "codon": "GAC>AAC",
+          "drug": "Levofloxacin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAC",
+            "ref_aa_extracted": "D"
+          }
+        },
+        "7581_C": {
+          "ref": "G",
+          "alt": "C",
+          "aa_change": "p.D94H",
+          "codon": "GAC>CAC",
+          "drug": "Levofloxacin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAC",
+            "ref_aa_extracted": "D"
+          }
+        },
+        "7581_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "p.D94Y",
+          "codon": "GAC>TAC",
+          "drug": "Levofloxacin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAC",
+            "ref_aa_extracted": "D"
+          }
+        },
+        "7582_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.D94A",
+          "codon": "GAC>GCC",
+          "drug": "Levofloxacin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAC",
+            "ref_aa_extracted": "D"
+          }
+        },
+        "7582_G": {
+          "ref": "A",
+          "alt": "G",
+          "aa_change": "p.D94G",
+          "codon": "GAC>GGC",
+          "drug": "Levofloxacin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAC",
+            "ref_aa_extracted": "D"
+          }
+        }
+      },
+      "gene_start": 7302,
+      "gene_end": 9818,
+      "strand": "+"
+    },
+    "gyrB": {
+      "start": 6559,
+      "end": 6770,
+      "known_mutations": {
+        "6579_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.S447F",
+          "codon": "TCC>TTC",
+          "drug": "Levofloxacin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TCC",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "6620_A": {
+          "ref": "G",
+          "alt": "A",
+          "aa_change": "p.D461N",
+          "codon": "GAC>AAC",
+          "drug": "Levofloxacin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAC",
+            "ref_aa_extracted": "D"
+          }
+        },
+        "6620_C": {
+          "ref": "G",
+          "alt": "C",
+          "aa_change": "p.D461H",
+          "codon": "GAC>CAC",
+          "drug": "Levofloxacin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAC",
+            "ref_aa_extracted": "D"
+          }
+        },
+        "6734_G": {
+          "ref": "A",
+          "alt": "G",
+          "aa_change": "p.N499D",
+          "codon": "AAC>GAC",
+          "drug": "Levofloxacin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AAC",
+            "ref_aa_extracted": "N"
+          }
+        },
+        "6735_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.N499T",
+          "codon": "AAC>ACC",
+          "drug": "Levofloxacin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AAC",
+            "ref_aa_extracted": "N"
+          }
+        },
+        "6741_T": {
+          "ref": "A",
+          "alt": "T",
+          "aa_change": "p.E501V",
+          "codon": "GAA>GTA",
+          "drug": "Levofloxacin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAA",
+            "ref_aa_extracted": "E"
+          }
+        },
+        "6742_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.E501D",
+          "codon": "GAA>GAC",
+          "drug": "Levofloxacin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAA",
+            "ref_aa_extracted": "E"
+          }
+        },
+        "6742_T": {
+          "ref": "A",
+          "alt": "T",
+          "aa_change": "p.E501D",
+          "codon": "GAA>GAT",
+          "drug": "Levofloxacin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAA",
+            "ref_aa_extracted": "E"
+          }
+        },
+        "6750_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.A504V",
+          "codon": "GCG>GTG",
+          "drug": "Levofloxacin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GCG",
+            "ref_aa_extracted": "A"
+          }
+        }
+      },
+      "gene_start": 5240,
+      "gene_end": 7267,
+      "strand": "+"
+    },
+    "rpoB": {
+      "start": 760294,
+      "end": 761297,
+      "known_mutations": {
+        "760314_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "p.V170F",
+          "codon": "GTC>TTC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GTC",
+            "ref_aa_extracted": "V"
+          }
+        },
+        "761082_A": {
+          "ref": "G",
+          "alt": "A",
+          "aa_change": "p.G426S",
+          "codon": "GGC>AGC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GGC",
+            "ref_aa_extracted": "G"
+          }
+        },
+        "761085_G": {
+          "ref": "A",
+          "alt": "G",
+          "aa_change": "p.T427A",
+          "codon": "ACC>GCC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ACC",
+            "ref_aa_extracted": "T"
+          }
+        },
+        "761085_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.T427P",
+          "codon": "ACC>CCC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ACC",
+            "ref_aa_extracted": "T"
+          }
+        },
+        "761085_T": {
+          "ref": "A",
+          "alt": "T",
+          "aa_change": "p.T427S",
+          "codon": "ACC>TCC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ACC",
+            "ref_aa_extracted": "T"
+          }
+        },
+        "761086_A": {
+          "ref": "C",
+          "alt": "A",
+          "aa_change": "p.T427N",
+          "codon": "ACC>AAC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ACC",
+            "ref_aa_extracted": "T"
+          }
+        },
+        "761086_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.T427I",
+          "codon": "ACC>ATC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ACC",
+            "ref_aa_extracted": "T"
+          }
+        },
+        "761086_G": {
+          "ref": "C",
+          "alt": "G",
+          "aa_change": "p.T427S",
+          "codon": "ACC>AGC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ACC",
+            "ref_aa_extracted": "T"
+          }
+        },
+        "761088_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.S428R",
+          "codon": "AGC>CGC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AGC",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "761088_G": {
+          "ref": "A",
+          "alt": "G",
+          "aa_change": "p.S428G",
+          "codon": "AGC>GGC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AGC",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "761089_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "p.S428I",
+          "codon": "AGC>ATC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AGC",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "761089_C": {
+          "ref": "G",
+          "alt": "C",
+          "aa_change": "p.S428T",
+          "codon": "AGC>ACC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AGC",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "761090_A": {
+          "ref": "C",
+          "alt": "A",
+          "aa_change": "p.S428R",
+          "codon": "AGC>AGA",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AGC",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "761090_G": {
+          "ref": "C",
+          "alt": "G",
+          "aa_change": "p.S428R",
+          "codon": "AGC>AGG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AGC",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "761092_T": {
+          "ref": "A",
+          "alt": "T",
+          "aa_change": "p.Q429L",
+          "codon": "CAG>CTG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAG",
+            "ref_aa_extracted": "Q"
+          }
+        },
+        "761092_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.Q429P",
+          "codon": "CAG>CCG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAG",
+            "ref_aa_extracted": "Q"
+          }
+        },
+        "761093_C": {
+          "ref": "G",
+          "alt": "C",
+          "aa_change": "p.Q429H",
+          "codon": "CAG>CAC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAG",
+            "ref_aa_extracted": "Q"
+          }
+        },
+        "761093_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "p.Q429H",
+          "codon": "CAG>CAT",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAG",
+            "ref_aa_extracted": "Q"
+          }
+        },
+        "761095_G": {
+          "ref": "T",
+          "alt": "G",
+          "aa_change": "p.L430R",
+          "codon": "CTG>CGG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CTG",
+            "ref_aa_extracted": "L"
+          }
+        },
+        "761095_C": {
+          "ref": "T",
+          "alt": "C",
+          "aa_change": "p.L430P",
+          "codon": "CTG>CCG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CTG",
+            "ref_aa_extracted": "L"
+          }
+        },
+        "761097_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.S431R",
+          "codon": "AGC>CGC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AGC",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "761097_G": {
+          "ref": "A",
+          "alt": "G",
+          "aa_change": "p.S431G",
+          "codon": "AGC>GGC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AGC",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "761098_A": {
+          "ref": "G",
+          "alt": "A",
+          "aa_change": "p.S431N",
+          "codon": "AGC>AAC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AGC",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "761098_C": {
+          "ref": "G",
+          "alt": "C",
+          "aa_change": "p.S431T",
+          "codon": "AGC>ACC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AGC",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "761099_A": {
+          "ref": "C",
+          "alt": "A",
+          "aa_change": "p.S431R",
+          "codon": "AGC>AGA",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AGC",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "761099_G": {
+          "ref": "C",
+          "alt": "G",
+          "aa_change": "p.S431R",
+          "codon": "AGC>AGG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AGC",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "761100_G": {
+          "ref": "C",
+          "alt": "G",
+          "aa_change": "p.Q432E",
+          "codon": "CAA>GAA",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAA",
+            "ref_aa_extracted": "Q"
+          }
+        },
+        "761100_A": {
+          "ref": "C",
+          "alt": "A",
+          "aa_change": "p.Q432K",
+          "codon": "CAA>AAA",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAA",
+            "ref_aa_extracted": "Q"
+          }
+        },
+        "761101_T": {
+          "ref": "A",
+          "alt": "T",
+          "aa_change": "p.Q432L",
+          "codon": "CAA>CTA",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAA",
+            "ref_aa_extracted": "Q"
+          }
+        },
+        "761101_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.Q432P",
+          "codon": "CAA>CCA",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAA",
+            "ref_aa_extracted": "Q"
+          }
+        },
+        "761102_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.Q432H",
+          "codon": "CAA>CAC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAA",
+            "ref_aa_extracted": "Q"
+          }
+        },
+        "761102_T": {
+          "ref": "A",
+          "alt": "T",
+          "aa_change": "p.Q432H",
+          "codon": "CAA>CAT",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAA",
+            "ref_aa_extracted": "Q"
+          }
+        },
+        "761106_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.M434L",
+          "codon": "ATG>CTG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ATG",
+            "ref_aa_extracted": "M"
+          }
+        },
+        "761106_T": {
+          "ref": "A",
+          "alt": "T",
+          "aa_change": "p.M434L",
+          "codon": "ATG>TTG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ATG",
+            "ref_aa_extracted": "M"
+          }
+        },
+        "761106_G": {
+          "ref": "A",
+          "alt": "G",
+          "aa_change": "p.M434V",
+          "codon": "ATG>GTG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ATG",
+            "ref_aa_extracted": "M"
+          }
+        },
+        "761107_G": {
+          "ref": "T",
+          "alt": "G",
+          "aa_change": "p.M434R",
+          "codon": "ATG>AGG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ATG",
+            "ref_aa_extracted": "M"
+          }
+        },
+        "761107_C": {
+          "ref": "T",
+          "alt": "C",
+          "aa_change": "p.M434T",
+          "codon": "ATG>ACG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ATG",
+            "ref_aa_extracted": "M"
+          }
+        },
+        "761108_A": {
+          "ref": "G",
+          "alt": "A",
+          "aa_change": "p.M434I",
+          "codon": "ATG>ATA",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ATG",
+            "ref_aa_extracted": "M"
+          }
+        },
+        "761108_C": {
+          "ref": "G",
+          "alt": "C",
+          "aa_change": "p.M434I",
+          "codon": "ATG>ATC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ATG",
+            "ref_aa_extracted": "M"
+          }
+        },
+        "761108_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "p.M434I",
+          "codon": "ATG>ATT",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ATG",
+            "ref_aa_extracted": "M"
+          }
+        },
+        "761109_A": {
+          "ref": "G",
+          "alt": "A",
+          "aa_change": "p.D435N",
+          "codon": "GAC>AAC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAC",
+            "ref_aa_extracted": "D"
+          }
+        },
+        "761109_C": {
+          "ref": "G",
+          "alt": "C",
+          "aa_change": "p.D435H",
+          "codon": "GAC>CAC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAC",
+            "ref_aa_extracted": "D"
+          }
+        },
+        "761109_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "p.D435Y",
+          "codon": "GAC>TAC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAC",
+            "ref_aa_extracted": "D"
+          }
+        },
+        "761110_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.D435A",
+          "codon": "GAC>GCC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAC",
+            "ref_aa_extracted": "D"
+          }
+        },
+        "761110_G": {
+          "ref": "A",
+          "alt": "G",
+          "aa_change": "p.D435G",
+          "codon": "GAC>GGC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAC",
+            "ref_aa_extracted": "D"
+          }
+        },
+        "761110_T": {
+          "ref": "A",
+          "alt": "T",
+          "aa_change": "p.D435V",
+          "codon": "GAC>GTC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAC",
+            "ref_aa_extracted": "D"
+          }
+        },
+        "761111_A": {
+          "ref": "C",
+          "alt": "A",
+          "aa_change": "p.D435E",
+          "codon": "GAC>GAA",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAC",
+            "ref_aa_extracted": "D"
+          }
+        },
+        "761111_G": {
+          "ref": "C",
+          "alt": "G",
+          "aa_change": "p.D435E",
+          "codon": "GAC>GAG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GAC",
+            "ref_aa_extracted": "D"
+          }
+        },
+        "761113_G": {
+          "ref": "A",
+          "alt": "G",
+          "aa_change": "p.Q436R",
+          "codon": "CAG>CGG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAG",
+            "ref_aa_extracted": "Q"
+          }
+        },
+        "761113_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.Q436P",
+          "codon": "CAG>CCG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAG",
+            "ref_aa_extracted": "Q"
+          }
+        },
+        "761115_G": {
+          "ref": "A",
+          "alt": "G",
+          "aa_change": "p.N437D",
+          "codon": "AAC>GAC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AAC",
+            "ref_aa_extracted": "N"
+          }
+        },
+        "761115_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.N437H",
+          "codon": "AAC>CAC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AAC",
+            "ref_aa_extracted": "N"
+          }
+        },
+        "761115_T": {
+          "ref": "A",
+          "alt": "T",
+          "aa_change": "p.N437Y",
+          "codon": "AAC>TAC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AAC",
+            "ref_aa_extracted": "N"
+          }
+        },
+        "761116_T": {
+          "ref": "A",
+          "alt": "T",
+          "aa_change": "p.N437I",
+          "codon": "AAC>ATC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AAC",
+            "ref_aa_extracted": "N"
+          }
+        },
+        "761116_G": {
+          "ref": "A",
+          "alt": "G",
+          "aa_change": "p.N437S",
+          "codon": "AAC>AGC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AAC",
+            "ref_aa_extracted": "N"
+          }
+        },
+        "761118_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.N438H",
+          "codon": "AAC>CAC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AAC",
+            "ref_aa_extracted": "N"
+          }
+        },
+        "761121_G": {
+          "ref": "C",
+          "alt": "G",
+          "aa_change": "p.P439A",
+          "codon": "CCG>GCG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CCG",
+            "ref_aa_extracted": "P"
+          }
+        },
+        "761121_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.P439S",
+          "codon": "CCG>TCG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CCG",
+            "ref_aa_extracted": "P"
+          }
+        },
+        "761122_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.P439L",
+          "codon": "CCG>CTG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CCG",
+            "ref_aa_extracted": "P"
+          }
+        },
+        "761127_G": {
+          "ref": "T",
+          "alt": "G",
+          "aa_change": "p.S441A",
+          "codon": "TCG>GCG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TCG",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "761128_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.S441L",
+          "codon": "TCG>TTG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TCG",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "761128_G": {
+          "ref": "C",
+          "alt": "G",
+          "aa_change": "p.S441W",
+          "codon": "TCG>TGG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TCG",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "761131_A": {
+          "ref": "G",
+          "alt": "A",
+          "aa_change": "p.G442E",
+          "codon": "GGG>GAG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GGG",
+            "ref_aa_extracted": "G"
+          }
+        },
+        "761134_C": {
+          "ref": "T",
+          "alt": "C",
+          "aa_change": "p.L443S",
+          "codon": "TTG>TCG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TTG",
+            "ref_aa_extracted": "L"
+          }
+        },
+        "761134_G": {
+          "ref": "T",
+          "alt": "G",
+          "aa_change": "p.L443W",
+          "codon": "TTG>TGG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TTG",
+            "ref_aa_extracted": "L"
+          }
+        },
+        "761135_C": {
+          "ref": "G",
+          "alt": "C",
+          "aa_change": "p.L443F",
+          "codon": "TTG>TTC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TTG",
+            "ref_aa_extracted": "L"
+          }
+        },
+        "761135_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "p.L443F",
+          "codon": "TTG>TTT",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TTG",
+            "ref_aa_extracted": "L"
+          }
+        },
+        "761136_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.T444P",
+          "codon": "ACC>CCC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ACC",
+            "ref_aa_extracted": "T"
+          }
+        },
+        "761136_T": {
+          "ref": "A",
+          "alt": "T",
+          "aa_change": "p.T444S",
+          "codon": "ACC>TCC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ACC",
+            "ref_aa_extracted": "T"
+          }
+        },
+        "761137_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.T444I",
+          "codon": "ACC>ATC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ACC",
+            "ref_aa_extracted": "T"
+          }
+        },
+        "761137_G": {
+          "ref": "C",
+          "alt": "G",
+          "aa_change": "p.T444S",
+          "codon": "ACC>AGC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ACC",
+            "ref_aa_extracted": "T"
+          }
+        },
+        "761139_A": {
+          "ref": "C",
+          "alt": "A",
+          "aa_change": "p.H445N",
+          "codon": "CAC>AAC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAC",
+            "ref_aa_extracted": "H"
+          }
+        },
+        "761139_G": {
+          "ref": "C",
+          "alt": "G",
+          "aa_change": "p.H445D",
+          "codon": "CAC>GAC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAC",
+            "ref_aa_extracted": "H"
+          }
+        },
+        "761139_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.H445Y",
+          "codon": "CAC>TAC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAC",
+            "ref_aa_extracted": "H"
+          }
+        },
+        "761140_G": {
+          "ref": "A",
+          "alt": "G",
+          "aa_change": "p.H445R",
+          "codon": "CAC>CGC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAC",
+            "ref_aa_extracted": "H"
+          }
+        },
+        "761140_T": {
+          "ref": "A",
+          "alt": "T",
+          "aa_change": "p.H445L",
+          "codon": "CAC>CTC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAC",
+            "ref_aa_extracted": "H"
+          }
+        },
+        "761140_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.H445P",
+          "codon": "CAC>CCC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAC",
+            "ref_aa_extracted": "H"
+          }
+        },
+        "761141_A": {
+          "ref": "C",
+          "alt": "A",
+          "aa_change": "p.H445Q",
+          "codon": "CAC>CAA",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAC",
+            "ref_aa_extracted": "H"
+          }
+        },
+        "761141_G": {
+          "ref": "C",
+          "alt": "G",
+          "aa_change": "p.H445Q",
+          "codon": "CAC>CAG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CAC",
+            "ref_aa_extracted": "H"
+          }
+        },
+        "761142_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.K446Q",
+          "codon": "AAG>CAG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AAG",
+            "ref_aa_extracted": "K"
+          }
+        },
+        "761142_G": {
+          "ref": "A",
+          "alt": "G",
+          "aa_change": "p.K446E",
+          "codon": "AAG>GAG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AAG",
+            "ref_aa_extracted": "K"
+          }
+        },
+        "761143_G": {
+          "ref": "A",
+          "alt": "G",
+          "aa_change": "p.K446R",
+          "codon": "AAG>AGG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AAG",
+            "ref_aa_extracted": "K"
+          }
+        },
+        "761143_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.K446T",
+          "codon": "AAG>ACG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AAG",
+            "ref_aa_extracted": "K"
+          }
+        },
+        "761149_A": {
+          "ref": "G",
+          "alt": "A",
+          "aa_change": "p.R448Q",
+          "codon": "CGA>CAA",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CGA",
+            "ref_aa_extracted": "R"
+          }
+        },
+        "761149_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "p.R448L",
+          "codon": "CGA>CTA",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CGA",
+            "ref_aa_extracted": "R"
+          }
+        },
+        "761151_A": {
+          "ref": "C",
+          "alt": "A",
+          "aa_change": "p.L449M",
+          "codon": "CTG>ATG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CTG",
+            "ref_aa_extracted": "L"
+          }
+        },
+        "761154_G": {
+          "ref": "T",
+          "alt": "G",
+          "aa_change": "p.S450A",
+          "codon": "TCG>GCG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TCG",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "761155_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.S450L",
+          "codon": "TCG>TTG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TCG",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "761155_G": {
+          "ref": "C",
+          "alt": "G",
+          "aa_change": "p.S450W",
+          "codon": "TCG>TGG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "TCG",
+            "ref_aa_extracted": "S"
+          }
+        },
+        "761158_G": {
+          "ref": "C",
+          "alt": "G",
+          "aa_change": "p.A451G",
+          "codon": "GCG>GGG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GCG",
+            "ref_aa_extracted": "A"
+          }
+        },
+        "761158_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "p.A451V",
+          "codon": "GCG>GTG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "GCG",
+            "ref_aa_extracted": "A"
+          }
+        },
+        "761160_A": {
+          "ref": "C",
+          "alt": "A",
+          "aa_change": "p.L452M",
+          "codon": "CTG>ATG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CTG",
+            "ref_aa_extracted": "L"
+          }
+        },
+        "761160_G": {
+          "ref": "C",
+          "alt": "G",
+          "aa_change": "p.L452V",
+          "codon": "CTG>GTG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CTG",
+            "ref_aa_extracted": "L"
+          }
+        },
+        "761161_C": {
+          "ref": "T",
+          "alt": "C",
+          "aa_change": "p.L452P",
+          "codon": "CTG>CCG",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "CTG",
+            "ref_aa_extracted": "L"
+          }
+        },
+        "761277_T": {
+          "ref": "A",
+          "alt": "T",
+          "aa_change": "p.I491F",
+          "codon": "ATC>TTC",
+          "drug": "Rifampicin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "ATC",
+            "ref_aa_extracted": "I"
+          }
+        }
+      },
+      "gene_start": 759807,
+      "gene_end": 763325,
+      "strand": "+"
+    },
+    "rpsL": {
+      "start": 781667,
+      "end": 781842,
+      "known_mutations": {
+        "781687_G": {
+          "ref": "A",
+          "alt": "G",
+          "aa_change": "p.K43R",
+          "codon": "AAG>AGG",
+          "drug": "Streptomycin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AAG",
+            "ref_aa_extracted": "K"
+          }
+        },
+        "781821_C": {
+          "ref": "A",
+          "alt": "C",
+          "aa_change": "p.K88Q",
+          "codon": "AAG>CAG",
+          "drug": "Streptomycin",
+          "drug_class": "",
+          "evidence": "WHO grade 2",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AAG",
+            "ref_aa_extracted": "K"
+          }
+        },
+        "781822_G": {
+          "ref": "A",
+          "alt": "G",
+          "aa_change": "p.K88R",
+          "codon": "AAG>AGG",
+          "drug": "Streptomycin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AAG",
+            "ref_aa_extracted": "K"
+          }
+        },
+        "781822_T": {
+          "ref": "A",
+          "alt": "T",
+          "aa_change": "p.K88M",
+          "codon": "AAG>ATG",
+          "drug": "Streptomycin",
+          "drug_class": "",
+          "evidence": "WHO grade 1",
+          "source": "who_catalogue",
+          "verification": {
+            "status": "VERIFIED",
+            "ref_codon_extracted": "AAG",
+            "ref_aa_extracted": "K"
+          }
+        },
+        "781797_C": {
+          "ref": "G",
+          "alt": "C",
+          "aa_change": "p.A80P",
+          "codon_change": "GCG>CCG",
+          "known_drug": "Streptomycin",
+          "who_grade": 2,
+          "verification_status": "VERIFIED",
+          "note": "rpsL Ala80Pro \u2014 WHO grade 2 streptomycin resistance. Found in ERR1664619 and ERR2510546."
+        }
+      },
+      "gene_start": 781560,
+      "gene_end": 781934,
+      "strand": "+"
+    },
+    "rrs_rRNA": {
+      "start": 1473100,
+      "end": 1473400,
+      "gene_start": 1471846,
+      "gene_end": 1473382,
+      "strand": "+",
+      "type": "rRNA",
+      "drug": "Amikacin/Kanamycin/Capreomycin",
+      "known_mutations": {
+        "1473246_G": {
+          "ref": "A",
+          "alt": "G",
+          "aa_change": "n.1401A>G",
+          "codon_change": "rRNA position 1401",
+          "who_grade": 1,
+          "verification_status": "rRNA",
+          "note": "Primary amikacin resistance mutation. WHO grade 1. Confirmed from TBProfiler JSON pos=1473246.",
+          "drug": "Amikacin"
+        },
+        "1473247_T": {
+          "ref": "C",
+          "alt": "T",
+          "aa_change": "n.1402C>T",
+          "codon_change": "rRNA position 1402",
+          "who_grade": 2,
+          "verification_status": "rRNA",
+          "note": "Secondary amikacin resistance mutation. WHO grade 2.",
+          "drug": "Amikacin"
+        },
+        "1473229_T": {
+          "ref": "G",
+          "alt": "T",
+          "aa_change": "n.1484G>T",
+          "codon_change": "rRNA position 1484",
+          "who_grade": 2,
+          "verification_status": "rRNA",
+          "note": "Secondary amikacin resistance mutation. WHO grade 2.",
+          "drug": "Amikacin"
+        }
+      },
+      "min_mq": 0,
+      "min_bq": 10,
+      "min_confidence": 0.6
+    }
+  }
+}

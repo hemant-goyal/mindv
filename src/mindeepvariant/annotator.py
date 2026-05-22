@@ -14,6 +14,11 @@ This module performs two critical functions:
 
 This two-tier system is the key differentiator from pure "lookup" tools like
 NTM-Profiler or Mykrobe, which can only report known variants.
+
+Special target types (set via panel JSON "type" field):
+   - "rRNA"     : 16S/23S rRNA — no codon translation; HGVS n. notation
+   - "promoter" : upstream regulatory region — HGVS c.- notation
+   Both types bypass get_amino_acid_change() entirely.
 """
 
 import json
@@ -70,7 +75,7 @@ class AnnotatedVariant:
 
     # From the annotator
     aa_change: str = ""
-    mutation_type: str = ""  # Missense, Synonymous, Nonsense, Indel
+    mutation_type: str = ""  # Missense, Synonymous, Nonsense, Indel, rRNA_variant, Promoter
     impact: str = ""         # HIGH, MODERATE, LOW
     tier: str = ""           # KNOWN, NOVEL
     known_drug: str = ""     # Drug association if Tier 1
@@ -83,6 +88,61 @@ def _translate_codon(codon_seq):
         return str(Seq(codon_seq).translate())
     except Exception:
         return CODON_TABLE.get(codon_seq.upper(), "?")
+
+
+def _is_rrna_target(gene_info: dict) -> bool:
+    """Return True if this target is an rRNA gene (not protein-coding)."""
+    return gene_info.get("type", "").lower() in ("rrna", "rna", "ncrna")
+
+
+def _is_promoter_target(gene_info: dict) -> bool:
+    """Return True if this target is an upstream promoter region."""
+    return gene_info.get("type", "").lower() == "promoter"
+
+
+def _annotate_rrna(ref_base: str, alt_base: str, genomic_pos: int,
+                   gene_info: dict) -> tuple:
+    """
+    Annotate a variant in an rRNA gene using RNA-level HGVS notation.
+
+    rRNA genes encode functional RNA, not protein. Codon arithmetic is
+    biologically meaningless here. The correct notation is:
+        n.1401A>G  (RNA position within the mature rRNA transcript)
+
+    The RNA position is computed as: genomic_pos - gene_start + 1
+    (rrs is on the + strand in H37Rv).
+
+    Returns: (aa_change, mutation_type, impact)
+    """
+    gene_start = gene_info.get("gene_start", 0)
+    rna_pos = genomic_pos - gene_start + 1   # 1-based RNA position
+    ref_r = ref_base.lower()
+    alt_r = alt_base.lower()
+    hgvs = f"n.{rna_pos}{ref_r}>{alt_r}"
+    return hgvs, "rRNA_variant", "HIGH"
+
+
+def _annotate_promoter(ref_base: str, alt_base: str, genomic_pos: int,
+                        gene_info: dict) -> tuple:
+    """
+    Annotate a variant in a promoter region using HGVS c.- notation.
+
+    Promoter offset is genomic_pos - TSS (transcription start site).
+    For + strand genes: offset = genomic_pos - gene_start  (negative = upstream)
+    For - strand genes: offset = gene_end - genomic_pos
+
+    Returns: (aa_change, mutation_type, impact)
+    """
+    strand = gene_info.get("strand", "+")
+    if strand == "+":
+        tss = gene_info.get("gene_start", genomic_pos)
+        offset = genomic_pos - tss       # negative = upstream
+    else:
+        tss = gene_info.get("gene_end", genomic_pos)
+        offset = tss - genomic_pos
+
+    hgvs = f"c.{offset}{ref_base}>{alt_base}"
+    return hgvs, "Promoter", "HIGH"
 
 
 def get_amino_acid_change(fasta_path, contig, mutation_pos, alt_base,
@@ -145,8 +205,6 @@ def get_amino_acid_change(fasta_path, contig, mutation_pos, alt_base,
 
             # For minus strand, pos_in_codon=0 is the RIGHTMOST genomic base
             # (first base of the coding codon), pos_in_codon=2 is the LEFTMOST.
-            # The codon spans from (mutation_pos + pos_in_codon - 2) to
-            # (mutation_pos + pos_in_codon) on the forward strand.
             codon_start_0based = mutation_pos - 3 + pos_in_codon
 
         # Fetch the 3-base codon from the genome
@@ -204,9 +262,13 @@ def load_panel(panel_path):
                 "strand": "+",
                 "drug": "Fluoroquinolones",
                 "known_mutations": {
-                    "7589": {"ref": "G", "alt": "T", "aa": "p.D91Y",
-                             "drug": "Ofloxacin", "literature": "WHO 2023"}
+                    "7589_T": {"ref": "G", "alt": "T", "aa_change": "p.D91Y",
+                               "drug": "Ofloxacin", "literature": "WHO 2023"}
                 }
+            },
+            "rrs_rRNA": {
+                "type": "rRNA",          ← triggers nucleotide-level annotation
+                "start": 1473100, ...
             }
         }
     }
@@ -233,43 +295,64 @@ def load_panel(panel_path):
 
 def annotate_variant(variant_call, panel_targets, fasta_path):
     """
-    Annotate a VariantCall with protein consequence and tier classification.
+    Annotate a VariantCall with consequence and tier classification.
 
-    Tier Logic:
-        - If the position+alt matches a known_mutations entry → Tier 1 (KNOWN)
-        - If it's in a target region but not catalogued → Tier 2 (NOVEL)
-        - If it's a synonymous change → marked as LOW impact regardless
+    Annotation strategy by target type
+    ------------------------------------
+    protein-coding (default):
+        Full codon arithmetic → HGVS p. notation (e.g. p.Ser450Leu)
+        Mutation types: Missense / Synonymous / Nonsense / Indel
 
-    Parameters
+    rRNA (type="rRNA" in panel JSON):
+        RNA position arithmetic → HGVS n. notation (e.g. n.1401a>g)
+        No codon translation — biologically meaningless for non-coding RNA
+        Mutation type: rRNA_variant, Impact: HIGH
+
+    promoter (type="promoter" in panel JSON):
+        Offset from TSS → HGVS c.- notation (e.g. c.-15C>T)
+        Mutation type: Promoter, Impact: HIGH
+
+    Tier Logic
     ----------
-    variant_call : VariantCall
-        Raw call from the scanner.
-    panel_targets : dict
-        The "targets" section of the panel JSON.
-    fasta_path : str
-        Path to reference FASTA for codon translation.
-
-    Returns
-    -------
-    annotated : AnnotatedVariant
+    KNOWN : position+alt matches a known_mutations entry in the panel
+    NOVEL : in a target region but not in the resistance database
     """
     gene_name = variant_call.gene
     gene_info = panel_targets.get(gene_name, {})
 
-    # Translate the DNA change to protein
-    aa_change, mut_type, impact = get_amino_acid_change(
-        fasta_path=fasta_path,
-        contig=variant_call.contig,
-        mutation_pos=variant_call.position,
-        alt_base=variant_call.alt_base,
-        gene_start=gene_info.get("gene_start", 0),
-        gene_end=gene_info.get("gene_end", 0),
-        strand=gene_info.get("strand", "+"),
-    )
+    # ── Step 1: Choose annotation strategy based on target type ──────────
+    if _is_rrna_target(gene_info):
+        # rRNA: use RNA-level HGVS notation, skip codon translation entirely
+        aa_change, mut_type, impact = _annotate_rrna(
+            ref_base=variant_call.ref_base,
+            alt_base=variant_call.alt_base,
+            genomic_pos=variant_call.position,
+            gene_info=gene_info,
+        )
 
-    # Tier classification: check against known mutations
-    # Keys in the panel use "position_alt" format (e.g., "7589_T") to support
-    # multiple known mutations at the same genomic position.
+    elif _is_promoter_target(gene_info):
+        # Promoter: use c.- offset notation
+        aa_change, mut_type, impact = _annotate_promoter(
+            ref_base=variant_call.ref_base,
+            alt_base=variant_call.alt_base,
+            genomic_pos=variant_call.position,
+            gene_info=gene_info,
+        )
+
+    else:
+        # Default: protein-coding gene — full codon arithmetic
+        aa_change, mut_type, impact = get_amino_acid_change(
+            fasta_path=fasta_path,
+            contig=variant_call.contig,
+            mutation_pos=variant_call.position,
+            alt_base=variant_call.alt_base,
+            gene_start=gene_info.get("gene_start", 0),
+            gene_end=gene_info.get("gene_end", 0),
+            strand=gene_info.get("strand", "+"),
+        )
+
+    # ── Step 2: Tier classification ───────────────────────────────────────
+    # Panel keys use "POSITION_ALT" format (e.g. "1473246_G")
     known_muts = gene_info.get("known_mutations", {})
     pos_alt_key = f"{variant_call.position}_{variant_call.alt_base.upper()}"
     tier = "NOVEL"
@@ -282,7 +365,15 @@ def annotate_variant(variant_call, panel_targets, fasta_path):
         known_drug = known_entry.get("drug", "")
         known_lit = known_entry.get("literature", "")
 
-    # Synonymous mutations are low-interest regardless of tier
+        # For KNOWN rRNA/promoter entries, use the panel's stored aa_change
+        # (e.g. "n.1401A>G") rather than our computed value — it's more reliable
+        if "aa_change" in known_entry:
+            aa_change = known_entry["aa_change"]
+
+    # ── Step 3: Impact override ───────────────────────────────────────────
+    # Synonymous protein changes are low-interest regardless of tier.
+    # rRNA_variant and Promoter stay HIGH even if NOVEL — they're in a
+    # resistance-relevant region by definition.
     if mut_type == "Synonymous":
         impact = "LOW"
 
