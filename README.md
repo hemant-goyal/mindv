@@ -677,8 +677,15 @@ Features planned for v2 and beyond, roughly in priority order:
 
 If you use mindv in your research, please cite:
 
-> *mindv: A Minimal PyTorch Implementation of Image-Based Variant Calling for Genomics Education and Rapid AMR Profiling.* [Hemant Goyal].(https://github.com/hemant-goyal/mindv) (Manuscript in preparation)
-
+```
+@misc{mindv,
+  author = {Hemant Goyal},
+  title = {mindv — A Minimal Deep Learning Haplotype Variant Caller},
+  year = {2026},
+  publisher = {GitHub},
+  url = {https://github.com/hemant-goyal/mindv}
+}
+```
 ---
 
 ## License
