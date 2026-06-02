@@ -1,6 +1,6 @@
 # mindv — A Minimal Deep Learning Haplotype Variant Caller
 
-[![Install](https://img.shields.io/badge/install-pip%20install%20git%2Bgithub.com%2Fhemant--goyal%2Fmindv-blue)](https://github.com/hemant-goyal/mindv)
+[![Install](https://img.shields.io/badge/install-pip%20install%20git%2Bgithub.com%2Fhemant--goyal%2Fmindv-red)](https://github.com/hemant-goyal/mindv)
 [![Version](https://img.shields.io/badge/version-v1.1.0-green)](https://github.com/hemant-goyal/mindv/releases/tag/v1.1.0)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
