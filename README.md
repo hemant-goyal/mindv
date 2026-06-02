@@ -121,7 +121,7 @@ After installation, the `mindv` command is available system-wide:
 ```bash
 mindv --help
 ```
-# Developer install (editable)
+### Developer install (editable)
 
 ```bash
 git clone https://github.com/hemant-goyal/mindv.git
