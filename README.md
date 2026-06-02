@@ -546,7 +546,7 @@ Overall accuracy: 96/100 (96.0%)
 ✓ Test passed (accuracy >= 85%)
 ```
 
-If accuracy drops below 85%, retrain the model (`mindeepvariant train`). The synthetic test does not require any BAM files, reference genomes, or external data.
+If accuracy drops below 85%, retrain the model (`mindv train`). The synthetic test does not require any BAM files, reference genomes, or external data.
 
 ### Manual verification with real data
 
